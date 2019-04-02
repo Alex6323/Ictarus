@@ -1,0 +1,39 @@
+[package]
+name = "ictarus"
+version = "0.1.0"
+authors = ["Alex6323 <Al3k5@protonmail.com>"]
+edition = "2018"
+
+[dependencies]
+tokio = "0.1.15"
+stream-cancel = "0.4.4"
+tokio-signal = "0.2.7"
+log = "0.4.6"
+pretty_env_logger = "0.3.0"
+futures = "0.1.25"
+crossterm = "0.6.0"
+priority-queue = "0.5.2"
+rand = "0.6.5"
+lazy_static = "1.2.0"
+regex = "1.1.0"
+clap = {version = "2.32.0", features = ["yaml"] }
+rayon = "1.0.3"
+num_cpus = "1.10.0"
+parking_lot = "0.7.1"
+twox-hash = "1.1.2"
+
+[features]
+default = []
+spammer = []
+
+[dev-dependencies]
+criterion = "0.2.10"
+
+[lib]
+name = "ictarus"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ictarus"
+path = "src/main.rs"
+
